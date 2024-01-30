@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../images/icono-kaffi.png">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Inter:wght@700&display=swap" rel="stylesheet">
+    <title>Mi Perfil - Kaffi</title>
+</head>
+
+<body>
+    <header>
+        <!-- barra de navegacion -->
+        <!-- diseño obtenido de https://getbootstrap.com/docs/5.3/components/navbar/ -->
+        <nav class="navbar navbar-expand-lg justify-content-between">
+
+            <!-- Botón de hamburguesa visible en pantallas pequeñas -->
+            <div class="py-2 ms-1 d-flex header-menu-icon">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                </button>
+            </div>
+
+            <!-- Contenedor del logo centrado, visible en pantallas pequeñas -->
+            <div class="d-lg-none d-flex align-items-center ms-auto ps-5">
+                <a href="../../index.html" class="header-logo-link">
+                    <img class="img-fluid" src="../images/imagen_nombre_kaffi.png" alt="imagen_de_nombre_kaffi"
+                        id="navegation-bar-logo" />
+                </a>
+            </div>
+
+            <!-- Contenedor del logo a la izquierda, visible en pantallas grandes -->
+            <div class="d-none d-lg-block mx-0 px-3">
+                <a href="../../index.html" class="header-logo-link py-3">
+                    <img class="img-fluid" src="../images/imagen_nombre_kaffi.png" alt="imagen_de_nombre_kaffi"
+                        id="navegation-bar-logo" />
+                </a>
+            </div>
+
+            <!-- Iconos de carrito y usuario a la derecha, siempre en la esquina superior derecha -->
+            <div id="iconos-carrito-y-usuario" class="ms-auto order-lg-last">
+                <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item p-0 d-flex align-items-center" id="shopping-cart">
+                        <a id="enlace-carrito-header" class="nav-link active text-white px-2"
+                            href="../pages/shopping-cart.html">
+                            <!-- Icono Carrito -->
+                            <i id="cart-icon"
+                                class="fa-solid fa-cart-shopping py-2 px-1 header-icons-link d-flex align-items-center justify-content-center"></i>
+                            <!-- inicia icono de numero de productos -->
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div id="cart-counter"
+                                    class="rounded-circle d-flex align-items-center justify-content-center">
+                                    <span id="total-number-items">0</span>
+                                </div>
+                            </div>
+                            <!-- termina icono de numero -->
+                        </a>
+                    </li>
+                    <li class="nav-item p-0 d-flex align-items-center">
+                        <a id="enlace-login-header" class="nav-link active text-white px-2" href="">
+                            <i class="fa-solid fa-user p-2 header-icons-link"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Menú desplegable, visible en pantallas pequeñas -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="../pages/menu.html">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="../pages/about_us.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="../pages/contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="introduction-container" class="row d-flex align-items-center justify-content-center p-2">
+            <div class="col-12 col-md-6 d-flex justify-content-md-end justify-content-center">
+                <img class="img-fluid rounded-circle py-2" src="../images/imagenusuario.png" alt="logo_kaffi_2"
+                    id="img-logo-blanco" />
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-md-start justify-content-center">
+                <h3 id="welcome-name" class="description text-center text-white">"Hola, NombreUsuario."</h3>
+            </div>
+        </section>
+    </header>
+
+    <!-- seccion principal -->
+    <main>
+        <section class="d-flex flex-column mx-auto my-3" id="profile-section-container">
+            <div class="row">
+
+                <!-- Menu lateral Opciones (pantallas grandes) -->
+                <div id="options-lateral-menu"
+                    class="col-md-4 d-md-flex flex-column justify-content-start align-items-center">
+                    <!-- Contenedor Imagen -->
+                    <div class="row d-flex align-items-center justify-content-center my-2">
+                        <div id="option-logo" class="container-forms col d-flex justify-content-center">
+                            <img src="../images/logo kaffi colores.png" class="img-fluid w-50 my-2">
+                        </div>
+                    </div>
+                    <!-- Seccion Cuenta Menu Lateral-->
+                    <div class="option-button row d-flex align-items-center justify-content-center my-2 w-100">
+                        <!-- columna para boton  -->
+                        <div class="col-2 d-flex justify-content-center ms-3">
+                            <i class="fa-solid fa-user-pen fa-xl"></i>
+                        </div>
+                        <div id="option-account-container" class="mx-0 col d-flex justify-content-start m-2">
+                            <button id="option-account-button-lg">Cuenta</button>
+                        </div>
+                    </div>
+                    <!-- Seccion Inf. Pago Menu Lateral-->
+                    <div class="option-button row d-flex align-items-center justify-content-center my-2 w-100">
+                        <!-- columna para boton  -->
+                        <div class="col-2 d-flex justify-content-center ms-3">
+                            <i class="fa-solid fa-credit-card fa-xl"></i>
+                        </div>
+                        <div id="option-paymethod-container" class="mx-0 col d-flex justify-content-start m-2 ">
+                            <button id="option-paymethod-button-lg">Info. Pago</button>
+                        </div>
+                    </div>
+                    <!-- Seccion Direccion Menu Lateral-->
+                    <div class="option-button row d-flex align-items-center justify-content-center my-2 w-100">
+                        <!-- columna para boton  -->
+                        <div class="col-2 d-flex justify-content-center ms-3">
+                            <i class="fa-solid fa-house-user fa-xl"></i>
+                        </div>
+                        <div id="option-address-container" class="mx-0 col d-flex justify-content-start m-2">
+                            <button id="option-address-button-lg">Dirección</button>
+                        </div>
+                    </div>
+                    <!-- Seccion Pedidos Menu Lateral-->
+                    <div class="option-button row d-flex align-items-center justify-content-center my-2 w-100">
+                        <!-- columna para boton  -->
+                        <div class="col-2 d-flex justify-content-center ms-3">
+                            <i class="fa-solid fa-bag-shopping fa-xl"></i>
+                        </div>
+                        <div id="option-orders-container" class="mx-0 col d-flex justify-content-start m-2">
+                            <button id="option-orders-button-lg">Pedidos</button>
+                        </div>
+                    </div>
+                    <!-- Seccion Comentarios Menu Lateral-->
+                    <div class="option-button row d-flex align-items-center justify-content-center my-2 w-100">
+                        <!-- columna para boton  -->
+                        <div class="col-2 d-flex justify-content-center ms-3">
+                            <i class="fa-solid fa-comments fa-xl"></i>
+                        </div>
+                        <div id="option-comments-container" class="mx-0 col d-flex justify-content-start m-2">
+                            <button id="option-comments-button-lg">Comentarios</button>
+                        </div>
+                    </div>
+                    <!-- Cerrar Sesion -->
+                    <div class="option-button-dark row d-flex align-items-center justify-content-start my-2 w-100">
+                        <!-- columna para boton  -->
+                        <div class="col-2 d-flex justify-content-center ms-3">
+                            <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                        </div>
+                        <div class="mx-0 col d-flex justify-content-start m-2">
+                            <button id="option-logout-button-lg">Cerrar Sesión</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Contenedores (pantallas grandes) y opcs+cont(pantallas pequeñas) -->
+                <div class="col-md-8">
+                    <!-- Contenedor Imagen -->
+                    <div class="row d-flex align-items-center justify-content-center my-2 d-md-none">
+                        <div id="option-logo" class="container-forms col-md-10 d-flex justify-content-center">
+                            <img src="../images/logo kaffi colores.png" class="img-fluid w-25 my-2">
+                        </div>
+                    </div>
+
+                    <!-- Seccion Cuenta -->
+                    <div class="option-button row d-flex align-items-center justify-content-center d-md-none my-2">
+                        <!-- columna para boton  -->
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-user-pen fa-xl"></i>
+                        </div>
+                        <div id="option-account-container" class="col-4 d-flex justify-content-center">
+                            <button id="option-account-button">Cuenta</button>
+                        </div>
+                        <div class="col-4  d-flex justify-content-center">
+                            <i class="fa-solid fa-caret-down fa-xl"></i>
+                        </div>
+                    </div>
+                    <!-- columna para contenedor  -->
+                    <div id="container-account" class="row align-items-center justify-content-center">
+
+                        <div class="col-md-10 mt-4">
+                            <h4 style="font-weight:bold;">Informacion de usuario</h4>
+                        </div>
+
+                        <!-- tarjeta para actualizacion de nombre -->
+                        <div class="container-forms col-md-10 d-flex justify-content-between m-2">
+                            <form id="user-name-form" class="row d-flex justify-content-between p-3 w-100">
+                                
+                                <div id="name-success-message-container" class="col-12 pb-2 text-success">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <span class="text-start">Nombre de usuario actualizado</span>
+                                        <i class="fa-solid fa-circle-check fa-beat m-3"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <div class="row d-flex align-items-start justify-content-between mb-2 w-100">
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <h6 class="">Nombre actual:</h6>
+                                            <p id="actual-name">"Nombre actual del usuario"</p>
+                                        </div>
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <label for="Name-Input" class="form-label">Modificar nombre:</label>
+                                            <div class="input-container d-flex align-items-center justify-content-center">
+                                                <input type="text" class="form-control rounded-pill" id="Name-Input"
+                                                    placeholder="Cosme">
+                                                <i id="invalid-name-sign"
+                                                    class="fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                            </div>
+                                            <p id="error-message-name" class="error-message"> </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex align-items-center justify-content-end me-4">
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <button class="btn rounded-pill" type="submit">Guardar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <!-- tarjeta para actualizacion de apellido -->
+                        <div class="container-forms col-md-10 d-flex justify-content-between m-2">
+                            <form id="user-lastName-form" class="row d-flex justify-content-between p-3 w-100">
+
+                                <div id="lastName-success-message-container" class="col-12 pb-2 text-success">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <span class="text-start">Apellido de usuario actualizado</span>
+                                        <i class="fa-solid fa-circle-check fa-beat m-3"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <div class="row d-flex align-items-start justify-content-between mb-2 w-100">
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <h6>Apellido actual:</h6>
+                                            <p id="actual-lastName">"Apellido actual del usuario"</p>
+                                        </div>
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <label for="LastName-Input" class="form-label">Modificar apellido:</label>
+                                            <div class="input-container d-flex align-items-center justify-content-center">
+                                                <input type="text" class="form-control rounded-pill" id="LastName-Input"
+                                                    placeholder="Fulanito">
+                                                <i id="invalid-lastName-sign"
+                                                    class="fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                            </div>
+                                            <p id="error-message-lastName" class="error-message"> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-12 d-flex align-items-center justify-content-end me-4">
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <button class="btn rounded-pill" type="submit">Guardar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <!-- tarjeta para actualizacion de email -->
+                        <div class="container-forms col-md-10 d-flex justify-content-between m-2">
+                            <form id="user-email-form" class="row d-flex justify-content-between p-3 w-100">
+
+                                <div id="email-success-message-container" class="pb-2 col-12 text-success">
+                                    <div class="d-flex align-items-center justify-content-start ">
+                                        <span class="text-start">E-mail de usuario actualizado</span>
+                                        <i class="fa-solid fa-circle-check fa-beat m-3"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <div class="row d-flex align-items-start justify-content-between mb-2 w-100">
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <h6>E-mail actual:</h6>
+                                            <p id="actual-email">"Email actual del usuario"</p>
+                                        </div>
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <label for="E-Mail-Input" class="form-label">Modificar e-mail:</label>
+                                            <div class="input-container d-flex align-items-center justify-content-center">
+                                                <input type="text" class="form-control rounded-pill" id="E-Mail-Input"
+                                                    placeholder="Nombre@gmail.com">
+                                                <i id="invalid-email-sign"
+                                                    class="fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                            </div>
+                                            <p id="error-message-email" class="error-message"> </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="col-12 d-flex align-items-center justify-content-end me-4">
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <button class="btn rounded-pill" type="submit">Guardar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+
+                        <!-- tarjeta para actualizacion de contraseña -->
+                        <div class="container-forms col-md-10 d-flex justify-content-between m-2">
+                            <form id="user-password-form" class="row d-flex justify-content-between p-3 w-100">
+
+                                <div id="password-success-message-container" class="col-12 pb-2">
+                                    <div class="d-flex align-items-start text-success">
+                                        <span class="text-start">Contraseña altualizada</span>
+                                        <i class="fa-solid fa-circle-check fa-beat m-3"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex align-items-start justify-content-between">
+                                    <div class="row d-flex align-items-start justify-content-between mb-2 w-100">
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <label for="OldPassword-Input" class="form-label actual-data">Contraseña Actual:</label>
+                                            <div class="input-container d-flex align-items-start justify-content-start">
+                                                <input type="password" class="form-control rounded-pill" id="OldPassword-Input"
+                                                    placeholder="Contraseña123">
+                                                <i id="invalid-oldPassword-sign"
+                                                    class="fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                            </div>
+                                            <p id="error-message-oldPassword" class="error-message"> </p>
+                                        </div>
+                                        <div class="text-start col-12 col-lg-6 pt-3">
+                                            <label for="NewPasswor-Input" class="form-label">Nueva contraseña:</label>
+                                            <div class="input-container d-flex align-items-start justify-content-start">
+                                                <input type="password" class="form-control rounded-pill" id="NewPasswor-Input"
+                                                    placeholder="NuevaContraseña123">
+                                                <i id="invalid-newPassword-sign"
+                                                    class="fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                            </div>
+                                            <p id="error-message-newPassword" class="error-message"> </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-12 d-flex align-items-center justify-content-end">
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <button class="btn rounded-pill" type="submit">Guardar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- Seccion Informacion Pago -->
+                    <div class="option-button row d-flex align-items-center justify-content-center d-md-none my-2">
+                        <!-- columna para boton  -->
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-credit-card fa-xl"></i>
+                        </div>
+                        <div id="option-paymethod-container" class="col-4 d-flex justify-content-center">
+                            <button id="option-paymethod-button">Inf. Pagos</button>
+                        </div>
+                        <div class="col-4  d-flex justify-content-center">
+                            <i class="fa-solid fa-caret-down fa-xl"></i>
+                        </div>
+                    </div>
+                    <div id="container-paymethod" class="row align-items-center justify-content-center">
+                        <div class="container-forms col-md-10 d-flex justify-content-center m-2">
+                            <div class="col-md-10 d-flex justify-content-center p-3">
+
+                                <form id="credit-card-form" class="row g-3">
+
+                                    <div class="col-10 pt-2">
+                                        <h4 style="font-weight:bold;">Datos de Tarjeta de Crédito</h4>
+                                    </div>
+
+                                    <div class="mb-3 text-start col-12">
+                                        <label for="inputCardNumber" class="form-label">Número de Tarjeta</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input type="text" class="form-control rounded-pill" id="inputCardNumber">
+                                        </div>
+                                        <p id="error-message-card-number" class="error-message"></p>
+                                    </div>
+
+                                    <div class="mb-3 text-start col-6">
+                                        <label for="inputExpirationDate" class="form-label">Fecha de Vencimiento</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input type="text" class="form-control rounded-pill"
+                                                id="inputExpirationDate" placeholder="MM/YY">
+                                        </div>
+                                        <p id="error-message-expiration-date" class="error-message"></p>
+                                    </div>
+
+                                    <div class="mb-3 text-start col-6">
+                                        <label for="inputCVV" class="form-label">CVV</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input type="text" class="form-control rounded-pill" id="inputCVV">
+                                        </div>
+                                        <p id="error-message-cvv" class="error-message"></p>
+                                    </div>
+
+                                    <div class="pt-2 d-flex justify-content-end">
+                                        <button disabled id="submit-credit-card-button" type="button"
+                                            class="btn rounded-pill">Enviar</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seccion Dirección -->
+                    <div class="option-button row d-flex align-items-center justify-content-center d-md-none my-2">
+                        <!-- columna para boton  -->
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-house-user fa-xl"></i>
+                        </div>
+                        <div id="option-address-container" class="col-4 d-flex justify-content-center">
+                            <button id="option-address-button">Dirección</button>
+                        </div>
+                        <div class="col-4  d-flex justify-content-center">
+                            <i class="fa-solid fa-caret-down fa-xl"></i>
+                        </div>
+                    </div>
+                    <div id="container-address" class="row align-items-center justify-content-center">
+                        <!-- columna para contenedor  -->
+                        <div class="container-forms col-md-10 d-flex justify-content-center m-2">
+                            <div class="col-md-10 d-flex justify-content-center p-3">
+
+                                <form id="address-form" class="row g-3">
+
+                                    <div class="col-10 pt-2">
+                                        <h4 style="font-weight:bold;">Dirección de envío</h4>
+                                    </div>
+
+                                    <div id="address-success-message-container" class="mt-3 text-success">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-solid fa-circle-check fa-beat fa-2xl m-3"></i>
+                                            <h5 id="success-message" class="mt-4 text-center">Tu información ha sido
+                                                actualizada</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2 text-start col-8">
+                                        <label for="inputStreet" class="form-label">Calle</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input disabled type="text" class="form-control rounded-pill" id="inputStreet">
+                                            <i id="invalid-street-sign"
+                                                class="alert-icon fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                        </div>
+                                        <p id="error-message-street" class="error-message pt-1"> </p>
+                                    </div>
+                                    <div class="mb-2 text-start col-4">
+                                        <label for="inputOutsideNum" class="form-label">No.Exterior</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input disabled type="text" class="form-control rounded-pill" id="inputOutsideNum">
+                                            <i id="invalid-outsideNum-sign"
+                                                class="alert-icon fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                        </div>
+                                        <p id="error-message-outsideNum" class="error-message pt-1"> </p>
+                                    </div>
+
+                                    <div class="mb-2 text-start col-4">
+                                        <label for="inputInsideNum" class="form-label">No.Interior</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input disabled type="text" class="form-control rounded-pill" id="inputInsideNum">
+                                            <i id="invalid-insideNum-sign"
+                                                class="alert-icon fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                        </div>
+                                        <p id="error-message-insideNum" class="error-message pt-1"> </p>
+                                    </div>
+                                    <div class="mb-2 text-start col-8">
+                                        <label for="inputColony" class="form-label">Colonia</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input disabled type="text" class="form-control rounded-pill" id="inputColony">
+                                            <i id="invalid-colony-sign"
+                                                class="alert-icon fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                        </div>
+                                        <p id="error-message-colony" class="error-message pt-1"> </p>
+                                    </div>
+
+                                    <div class="mb-2 text-start col-8">
+                                        <label for="inputMunicipality" class="form-label">Municipio</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input disabled type="text" class="form-control rounded-pill" id="inputMunicipality">
+                                            <i id="invalid-municipality-sign"
+                                                class="alert-icon fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                        </div>
+                                        <p id="error-message-municipality" class="error-message pt-1"> </p>
+                                    </div>
+                                    <div class="mb-2 text-start col-4">
+                                        <label for="inputZip" class="form-label">CP</label>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <input disabled type="text" class="form-control rounded-pill" id="inputZip">
+                                            <i id="invalid-zip-sign"
+                                                class="alert-icon fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                        </div>
+                                        <p id="error-message-zip" class="error-message pt-1"> </p>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="inputStore" class="form-label">Sucursal de preferencia</label>
+                                        <select disabled id="inputStore" class="rounded-pill form-select">
+                                            <option>Sucursal Fco. de Montejo</option>
+                                            <option>Sucursal Caucel</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="my-4 d-flex justify-content-end">
+                                        <button id="edit-address-button" type="button"
+                                            class="btn me-2 rounded-pill">Editar</button>
+                                        <button class="btn rounded-pill" type="submit">Guardar</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seccion Pedidos -->
+                    <div class="option-button row d-flex align-items-center justify-content-center d-md-none my-2">
+                        <!-- columna para boton  -->
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-bag-shopping fa-xl"></i>
+                        </div>
+                        <div id="option-orders-container" class="col-4 d-flex justify-content-center">
+                            <button id="option-orders-button">Pedidos</button>
+                        </div>
+                        <div class="col-4  d-flex justify-content-center">
+                            <i class="fa-solid fa-caret-down fa-xl"></i>
+                        </div>
+                    </div>
+                    <div id="container-orders" class="row align-items-center justify-content-center">
+                        <!-- columna para contenedor  -->
+                            <div class="col-md-10 container-forms d-flex flex-column align-items-center justify-content-center">
+                                <h4 class ="mt-4" style="font-weight:bold;">Información de pedidos</h4>
+                                <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg"> <!-- modal-lg para un modal más grande -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="orderDetailsModalLabel">Detalles de la Orden</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Aquí se insertará dinámicamente el contenido del modal -->
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="no-orders" class="row w-100 align-items-center justify-content-center p-5">
+                                    <h6 class="text-center">No hay pedidos disponibles</h6>
+                                </div>
+                                <div id="orders" class="row align-items-center justify-content-center w-100 pb-3">
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- Seccion Comentarios -->
+                    <div class="option-button row d-flex align-items-center justify-content-center d-md-none my-2">
+                        <!-- columna para boton  -->
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-comments fa-xl"></i>
+                        </div>
+                        <div id="option-comments-container" class="col-4 d-flex justify-content-center">
+                            <button id="option-comments-button">Comentarios</button>
+                        </div>
+                        <div class="col-4  d-flex justify-content-center">
+                            <i class="fa-solid fa-caret-down fa-xl"></i>
+                        </div>
+                    </div>
+                    <div id="container-comments" class="row align-items-center justify-content-center">
+                        <!-- columna para contenedor  -->
+                        <div class="container-forms col-md-10 d-flex justify-content-center m-2">
+                            <div class="col-md-10 d-flex justify-content-center p-3">
+
+                                <form id="commentary-form" class="row g-3">
+                                    <div class="col-10 pt-2">
+                                        <h4 style="font-weight:bold;">Caja de comentarios</h4>
+                                    </div>
+
+                                    <div id="comments-success-message-container" class="mt-3 text-success">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-solid fa-envelope-circle-check fa-beat fa-2xl m-3"></i>
+                                            <h5 id="success-message" class="mt-4 text-center">Gracias por tu comentario
+                                            </h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 pt-2 text-justify">
+                                        <p style="font-weight:bold;">En Kaffi nos interesa conocer las opiniones, quejas
+                                            o sugerencias de nuestros clientes. Tu retroalimentación nos ayuda a mejorar
+                                        </p>
+                                    </div>
+
+                                    <div class="mb-2 text-start">
+                                        <label for="Commentary-Input" class="form-label">Escribe tu comentario:</label>
+                                        <p id="error-message-comment" class="error-message"> </p>
+                                        <div class="input-container d-flex align-items-center justify-content-center">
+                                            <textarea type="text" class="form-control" id="Commentary-Input" rows="4"
+                                                placeholder="10 -200 caracteres"></textarea>
+                                            <i id="invalid-comment-sign"
+                                                class="fa-solid fa-circle-exclamation fa-shake ms-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn rounded-pill" type="submit">Enviar</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cerrar Sesion -->
+                    <div class="option-button-dark row d-flex align-items-center justify-content-start d-md-none my-2">
+                        <!-- columna para boton  -->
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center">
+                            <button id="option-logout-button">Cerrar Sesión</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="text-light">
+
+        <!-- Section: Social media -->
+        <section id="social-media" class="text-center p-3 border-bottom border-3">
+
+            <div class="mb-2">
+                <span>Siguenos en nuestras redes sociales</span>
+            </div>
+
+            <div>
+                <a href="https://www.instagram.com/kaffimerida/" target="_blank" class="me-5">
+                    <img class="social-icon" src="../images/icons8-instagram-60.png" alt="El icono de Instagram"></a>
+                <a href="https://www.facebook.com/kaffiMid/?locale=es_LA" target="_blank" class="me-5">
+                    <img class="social-icon" src="../images/icons8-facebook-50 (2).png" alt="El icono de Facebook"></a>
+                <a href="https://api.whatsapp.com/message/RMOZKTGCQLG3H1?autoload=1&app_absent=0" target="_blank">
+                    <img class="social-icon" src="../images/icons8-whatsapp-50 (1).png" alt="El icono de whatssap"></a>
+            </div>
+        </section>
+
+        <!-- Section: Logo y sucursales  -->
+        <section id="sucursales" class="text-center p-3 border-bottom border-3">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+
+                    <!-- Logo -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <img src="../images/logo kaffi blanco.png" alt="logo de Kaffi" class="img-fluid w-50">
+                    </div>
+
+                    <!-- Fransisco Montejo -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h5 class="mb-4 ">
+                            Sucursal Francisco de Montejo
+                        </h5>
+                        <p class="text-light">
+                            C.41-A #441-x 58,
+                            Fransisco de Montejo,
+                            97203
+                            Mérida Ycatan
+                        </p>
+                    </div>
+
+                    <!-- Caucel -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h5 class="mb-4">
+                            Sucursal Caucel
+                        </h5>
+                        <p class="text-light">
+                            C.70 #673-x 39 A y 43,
+                            Plaza Premium Caucel local #6,
+                            Caucel, 97203,
+                            Mérida Ycatan
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="text-light text-center p-4">
+            <p class="text-light"> Politica de Privacidad | Términos y Condicones de Uso | Aviso Legal</p><br>
+            <p class="text-light">Copyright © [2018] [Kaffi S.A de C.V]</p>
+            <span>Todos los derechos reservados</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7f430a0c40.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="module" src="../js/profile.js"></script>
+    <script type="module" src="../js/profile-user-form-validation.js"></script>
+    <script type="module" src="../js/profile-address-form-validation.js"></script>
+    <script type="module" src="../js/profile-comments-validation.js"></script>
+</body>
+
+</html>

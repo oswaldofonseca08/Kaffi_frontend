@@ -1,0 +1,321 @@
+/* Inicio estilos para el header */
+header {
+    /*https://stackoverflow.com/questions/12609110/responsive-css-background-images*/
+    width: 100%;
+    height: auto;
+    background-image: url(../images/contactpage_fondoheader.png);
+    background-size: cover;
+    font-family: 'Imprima', sans-serif;
+    font-size: 1em;
+}
+
+header #introduction-container {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-top: 2px;
+    border-color: #ffffff;
+    border-top-style: solid;
+}
+.header-logo-link:hover{
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-color: #ffffff;
+}
+.header-icons-link{
+    font-size: 24px; 
+    border-radius: 3em;
+}
+.header-menu-icon{
+    border-radius: 1em;
+}
+.header-icons-link:hover, .header-menu-icon:hover{
+    background-color: #9c846a8e;
+}
+
+
+/* inicia estilos de numero de items en icono de carrito */
+#shopping-cart{
+    position: relative;
+    width: 60px;
+}
+
+#shopping-cart #cart-counter{
+    position: absolute;
+    text-align: center;
+    right:0px;
+    top: 3px;
+    font-size: 1em;
+    width: 1.5em;
+    background-color: #7E4F25;
+}
+
+#shopping-cart #cart-icon{
+    position: absolute;
+    text-align: center;
+    top:8px;
+}
+
+/* termina estilos de numero de items en icono de carrito */
+
+#navegation-bar-logo {
+    max-width: 100px;
+}
+
+.custom-toggler {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.custom-toggler:active,
+.custom-toggler:focus {
+    background-color: transparent !important;
+    color: transparent !important;
+}
+
+.show .nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    /* Tamaño predeterminado del texto del menú */
+    margin-left: 1rem;
+}
+
+.nav-link:hover {
+    text-decoration-line: underline;
+}
+
+#img-logo-blanco {
+    max-width: 30vh;
+}
+
+.description {
+    max-width: 60vw;
+}
+
+/* Fin estilos para el header */
+
+/* reglas para imagenes y letras aplicados hasta dispositivos medianos */
+@media screen and (max-width: 500px) {
+    header {
+        height: auto;
+        padding: 0 20px;
+        font-size: 7vw;
+    }
+
+    
+}
+
+/* estilos de la seccion de productos oferta */
+/* Inicio Seccion promos Carrousel */
+#offer-products-container{
+    background-color: rgb(246, 234, 204);
+    width:80vw;
+
+}
+
+.text-offers{
+    font-family: "Imprima";
+    color: #361c12;
+}
+
+
+#text-offer-container{
+    width:80%;
+}
+
+.img-promo-carrousel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Esto asegura que la imagen cubra completamente el contenedor sin deformarse */
+}
+
+.container-with-height {
+    height: 50vh;
+}
+
+/* Fin Seccion Carrousel */
+
+
+/* Inicio estilos de la seccion de productos de temporada */
+
+#season-products {
+    background-color: #F6EACC;
+    width: 80vw;
+}
+
+#season-products #card-description img {
+    width: 50%;
+}
+
+#season-products #card-description {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#season-products #card-description h5 {
+    font-family: 'Imprima', sans-serif;
+    color: #361c12;
+    text-align: center;
+    width: 80%;
+}
+
+#season-products #card-description button {
+    background-color: #361c12;
+    color: #F6EACC;
+    padding: 15px;
+    margin-top: 50px;
+    border: none; /* Quita el borde del botón si es necesario */
+}
+
+#season-products #card-description a {
+    color: #F6EACC;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+#season-products #first-row {
+    margin-top: 50px;
+}
+
+#season-products #outstanding-product-1 img {
+    width: 100%;
+}
+
+#season-products #outstanding-product-2 img {
+    width: 100%;
+}
+
+#season-products #outstanding-product-3 img {
+    width: 100%;
+}
+
+#season-products #outstanding-product-4 img {
+    width: 100%;
+}
+
+#season-products #card-images p{
+    font-family: 'Inter', sans-serif;
+    color: #361c12;
+}
+
+#season-products #card-images {
+    align-content:center;
+}
+/* termina seccion de productos destacados */
+
+/*================================ Footer Styles ================================*/
+footer{
+    background-color: #361c12;
+}
+
+#social-media{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#sucursales{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.social-icon{
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    transition: 1s;
+}
+
+.social-icon:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+/* semillas cafe rafa 9 */
+
+#seeds-developers-team-left{
+    transform: rotate(-18.81deg);
+}
+
+#seeds-developers-team-right{
+transform: rotate(159.85deg);
+}
+
+
+#profile-card{
+    background-color: #361c12;
+    color: #ffffff;
+}
+#card-footer{
+    color: #ffffff;
+}
+
+#navegation-bar-logo{
+max-width: 100px;
+}
+
+.custom-toggler {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.custom-toggler:active,
+.custom-toggler:focus {
+    background-color: transparent !important;
+    color: transparent !important;
+}
+
+
+.show .nav-link {
+    text-decoration: none;
+    font-size: 18px; /* Tamaño predeterminado del texto del menú */
+    margin-left: 1rem;
+}
+
+.nav-link:hover {
+    text-decoration-line: underline;
+}
+
+#img-logo-blanco{
+    max-width: 30vh;
+}
+.description{
+    max-width:60vw;
+}
+
+
+/* Top Products */
+
+/* Estilos para el contenedor principal */
+#Top-products{
+    width:80vw;
+    background-color: #361c12;
+    color: white;
+}
+
+ #Top-products h5{
+    color:  #F6EACC; /* Color del texto */
+    font-family: 'Imprima', sans-serif;
+ }
+
+ #Top-products p{
+    color:  #F6EACC; /* Color del texto */
+    font-family: 'inter', sans-serif;
+ }
+
+.mi-boton-1 {
+    text-decoration:#361c12; /* Quita el subrayado */
+    border: none; /* Quita el borde del botón si es necesario */
+    background-color: #F6EACC; /* Color de fondo */
+    color: #361c12; /* Color del texto */
+    padding: 10px 20px; /* Ajusta el espaciado interno */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+

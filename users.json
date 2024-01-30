@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "firstName": "Oswaldo",
+        "lastName": "Fonseca Mejia",
+        "email": "leonNeumann.26121990@gmail.com",
+        "password": "Code_Titans123",
+        "address": "Beberly Hills, 90210, , California, 57896, Sucursal Fco. de Montejo",
+        "UserType": {"id":1}
+    },
+    {
+        "id": 2,
+        "firstName": "Fernando",
+        "lastName": "Juarez Sanchez",
+        "email": "juarezsfw@outlook.com",
+        "password": "Code_Titans123",
+        "address": "Fondo de bikin No.154",
+        "UserType": {"id":1}
+    },
+    {
+        "id": 3,
+        "firstName": "Alan",
+        "lastName": "Villa Ocampo",
+        "email": "zailancoc@gmail.com",
+        "password": "Code_Titans123",
+        "address": "Fondo de bikin No.897",
+        "UserType": {"id":1}
+    },
+    {
+        "id": 4,
+        "firstName": "Rafael",
+        "lastName": "Ceniceros Ceballos",
+        "email": "rrafa7114@gmail.com",
+        "password": "iRafa127",
+        "address": "Fondo de bikini,897,2,Oceano Pacifico,12345,Sucursal Caucel",
+        "UserType": {"id":1}
+    },
+    {
+        "id": 5,
+        "firstName": "Cristiano Ronaldo",
+        "lastName": "Dos Santos Aveiro",
+        "email": "CR7_oficial@gmail.com",
+        "password": "Code_Titans123",
+        "address": "Calle de la Amistad, No. 123, , Colonia Bella Vista, Ciudad Ejemplo, C.P. 54321, Sucursal Fco. de Montejo",
+        "UserType": {"id":2}
+    },
+    {
+        "id": 6,
+        "firstName": "Andrés Manuel",
+        "lastName": "López Obrador",
+        "email": "AMLO_4T@gmail.com",
+        "password": "Code_Titans123",
+        "address": "Calle de los Sueños, No. 101, Int 456, Colonia Esperanza, Ciudad Fantástica, C.P. 67890, Sucursal Caucel",
+        "UserType": {"id":2}
+    },
+    {
+        "id": 7,
+        "firstName": "Isaac",
+        "lastName": "Newton",
+        "email": "fisicomuerto@gmail.com",
+        "password": "Code_Titans123",
+        "address": "Calle del Encanto, No. 101, , Colonia Encantada, Ciudad Asombrosa, C.P. 24680 , Sucursal Caucel",
+        "UserType": {"id":2}
+    }
+]
+
+

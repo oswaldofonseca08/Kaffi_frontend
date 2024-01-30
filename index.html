@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/images/icono-kaffi.png">    
+    <link rel="stylesheet" href="./assets/styles/homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Inter:wght@700&display=swap" rel="stylesheet">
+    <title>Homepage - Kaffi</title>
+</head>
+
+<body>
+    <header>
+        <!-- barra de navegacion -->
+        <!-- diseño obtenido de https://getbootstrap.com/docs/5.3/components/navbar/ -->
+        <nav class="navbar navbar-expand-lg justify-content-between">
+
+            <!-- Botón de hamburguesa visible en pantallas pequeñas -->
+            <div class="py-2 ms-1 d-flex header-menu-icon">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                </button>
+            </div>
+
+            <!-- Contenedor del logo centrado, visible en pantallas pequeñas -->
+            <div class="d-lg-none d-flex align-items-center ms-auto ps-5">
+                <a href=./index.html class="header-logo-link">
+                    <img class="img-fluid" src="./assets/images/imagen_nombre_kaffi.png" alt="imagen_de_nombre_kaffi"
+                        id="navegation-bar-logo" />
+                </a>
+            </div>
+
+            <!-- Contenedor del logo a la izquierda, visible en pantallas grandes -->
+            <div class="d-none d-lg-block mx-0 px-3">
+                <a href=./index.html class="header-logo-link py-3">
+                    <img class="img-fluid" src="./assets/images/imagen_nombre_kaffi.png" alt="imagen_de_nombre_kaffi"
+                        id="navegation-bar-logo" />
+                </a>
+            </div>
+
+            <!-- Iconos de carrito y usuario a la derecha, siempre en la esquina superior derecha -->
+            <div id="iconos-carrito-y-usuario" class="ms-auto order-lg-last">
+                <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item p-0 d-flex align-items-center" id="shopping-cart">
+                        <a id="enlace-carrito-header" class="nav-link active text-white px-2" href="./assets/pages/shopping-cart.html">
+                            <!-- Icono Carrito -->
+                            <i id="cart-icon" class="fa-solid fa-cart-shopping py-2 px-1 header-icons-link d-flex align-items-center justify-content-center"></i>
+                            <!-- inicia icono de numero de productos -->
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div id="cart-counter"class="rounded-circle d-flex align-items-center justify-content-center">
+                                    <span id="total-number-items">0</span>
+                                </div>
+                            </div>
+                            <!-- termina icono de numero -->
+                        </a>
+                    </li>
+                    <li class="nav-item p-0 d-flex align-items-center">
+                        <a id="enlace-login-header" class="nav-link active text-white px-2"
+                            href="">
+                            <i class="fa-solid fa-user p-2 header-icons-link"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Menú desplegable, visible en pantallas pequeñas -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page"
+                            href="./assets/pages/menu.html">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="./assets/pages/about_us.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="./assets/pages/contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="introduction-container">
+            <div class="d-flex justify-content-center my-5">
+                <img class="img-fluid py-2 " src="./assets/images/logo_kaffi_blanco_1.png" alt="logo_kaffi_2"
+                    id="img-logo-blanco"/>
+            </div>
+            <div class="d-flex justify-content-center">
+                <h4 class="description text-center text-white mb-2 p-4">"Queremos darte la mejor experiencia con
+                    nuestros productos."
+                </h4>
+            </div>
+
+        </section>
+    </header>
+
+    <!-- seccion principal -->
+    <main>
+        <!-- seccion de productos de oferta  -->
+        <section class="d-flex justify-content-center mx-auto my-3" id="offer-products-container">
+            <div class="container">
+                <div class="row">
+                    <!-- Columna carrousel -->
+                    <div class="col-md-5 col-sm-12 order-sm-first order-md-last">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                            <!-- Contenedor imagenes de carrousel -->
+                            <div class="carousel-inner container-with-height">
+                                <!-- Se definio una altura maxima del contenedor -->
+                                <div class="carousel-item active container-with-height">
+                                    <!-- Se agregó la case img-promo-carrousel para que la imagen se ajuste al tamaño del contenedor -->
+                                    <img src="./assets/images/promo 2.jpg" class="d-flex w-100 img-promo-carrousel"
+                                        alt="promo frappes">
+                                </div>
+                                <div class="carousel-item container-with-height">
+                                    <!-- Se agregó la case img-promo-carrousel para que la imagen se ajuste al tamaño del contenedor -->
+                                    <img src="./assets/images/promo 1.jpg" class="d-flex w-100 img-promo-carrousel"
+                                        alt="promo navidad">
+                                </div>
+                                <div class="carousel-item container-with-height">
+                                    <!-- Se agregó la case img-promo-carrousel para que la imagen se ajuste al tamaño del contenedor -->
+                                    <img src="./assets/images/promo 3.jpg" class="d-flex w-100 img-promo-carrousel"
+                                        alt="promo mochas">
+                                </div>
+                                <div class="carousel-item container-with-height">
+                                    <!-- Se agregó la case img-promo-carrousel para que la imagen se ajuste al tamaño del contenedor -->
+                                    <img src="./assets/images/promo 4.jpg" class="d-flex w-100 img-promo-carrousel"
+                                        alt="combo kafoso">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Columna texto -->
+                    <div
+                        class="col-md-7 col-sm-12 d-flex flex-column align-items-center justify-content-center container-with-height py-3">
+                        <div class="col-sm-12 text-center" id="text-offer-container">
+                            <h5 class="text-offers py-3">"Explora el arte del café con nuestras promociones
+                                irresistibles. ¡Descubre tu nueva
+                                cafetería favorita a precios que te sorprenderán!"
+                            </h5>
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-center w-25" id="seeds2">
+                            <img src="./assets/images/granos_cafe.png" alt="dibujo de granos de café" class="img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Código Alan, Sección Productos destacados -->
+
+        <section id="Top-products" class="d-flex justify-content-center mx-auto my-3 ">
+            <div class="row">
+                <!-- Columna Productos -->
+                <div
+                    class="col-sm-12 col-md-6 text-center align-items-center justify-content-center d-flex flex-column">
+                    <!--Columna 1-->
+                    <div class="row d-flex justify-content-center align-items-center mx-auto">
+                        <!-- Producto 1 -->
+                        <div class="col-sm-6 w-50">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="./assets/images/top-products1.png" alt="Imagen Producto 1" class="img-fluid">
+                                <p class="product-name pe-4">Choco Bombón</p>
+                            </div>
+                        </div>
+                        <!-- Producto 2 -->
+                        <div class="col-sm-6 w-50">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="./assets/images/top-products2.png" alt="Imagen Producto 2" class="img-fluid">
+                                <p class="product-name pe-4">Chocolate Bomb</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-center align-items-center mx-auto">
+                        <!-- Producto 3 -->
+                        <div class="col-sm-6 w-50">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="./assets/images/top-products3.png" alt="Imagen Producto 3" class="img-fluid">
+                                <p class="product-name pe-4">Pay de Elote</p>
+                            </div>
+                        </div>
+                        <!-- Producto 4 -->
+                        <div class="col-sm-6 w-50">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="./assets/images/top-products4.png" alt="Imagen Producto 4" class="img-fluid">
+                                <p class="product-name pe-4">Wafle con Helado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna Textos -->
+                <div class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-end text-center">
+                    <!--Columna 2-->
+                    <div class="py-3 my-5">
+                        <h5 class="px-5 mb-5">
+                            "Conoce nuestros destacados: una colección cuidadosamente seleccionada para que deleites tus
+                            sentidos con lo mejor."
+                        </h5>
+                        <div class="d-flex justify-content-center col-sm-12">
+                            <a href="./assets/pages/menu.html" title="Conoce nuestro Menu">
+                                <button type="submit" class="mi-boton-1">Explorar productos</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Granos de café-->
+                    <div class="d-flex justify-content-end pt-md-5">
+                        <img src="./assets/images/semillas claras.png" alt="dibujo de granos de café" class="w-25">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Código Kim, sección Productos de temporada-->
+
+        <section section class="d-flex justify-content-center mx-auto my-3" id="season-products">
+            <div class="container ">
+                <div class="row">
+                    <div id="card-description" class="d-flex flex-column col-sm-12 col-md-6 order-last order-md-first">
+                        <!--Columna 1-->
+                        <div class="d-flex align-content-center justify-content-center col-sm-12">
+                            <img src="./assets/images/semillas_cafe_extendidas.png" alt="semillas_de_cafe" />
+                        </div>
+                        <div class="d-flex justify-content-center col-sm-12">
+                            <h5>"Saborea cada momento del año con nuestra colección de productos de temporada.”</h5>
+                        </div>
+                        <div class="d-flex justify-content-center col-sm-12">
+                            <a href="./assets/pages/menu.html" title="Conoce nuestro Menu">
+                                <button>Explorar productos</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="card-images"
+                        class="col-sm-12 col-md-6 text-center align-items-center justify-content-center d-flex flex-column order-first order-md-last">
+                        <!--Columna 2-->
+                        <div id="first-row" class="row col-sm-12">
+                            <div class="col">
+                                <div id="outstanding-product-1">
+                                    <img src="./assets/images/pan_de_muerto.png" alt="pan_de_muerto">
+                                </div>
+                                <div>
+                                    <p>Pan de muerto</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div id="outstanding-product-2">
+                                    <img src="./assets/images/pupmkin_spice_latte.png" alt="pumpkin_spice_latte">
+                                </div>
+                                <div>
+                                    <p>Pumpkin spice latte</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="second-row" class="row col-sm-12">
+                            <div class="col">
+                                <div id="outstanding-product-3">
+                                    <img src="./assets/images/cafe_de_olla.png" alt="cafe_de_olla">
+                                </div>
+                                <div>
+                                    <p>Cafe de olla</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div id="outstanding-product-4">
+                                    <img src="./assets/images/galleta_brownie.png" alt="galleta_de_brownie">
+                                </div>
+                                <div>
+                                    <p>Galleta de brownie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- Foother Section -->
+    <!-- codigo de valdo -->
+
+    <footer class="text-light">
+
+        <!-- Section: Social media -->
+        <section id="social-media" class="text-center p-3 border-bottom border-3">
+
+            <div class="mb-2">
+                <span>Síguenos en nuestras redes sociales</span>
+            </div>
+
+            <div>
+                <a href="https://www.instagram.com/kaffimerida/" target="_blank" class="me-5">
+                    <img class="social-icon" src="./assets/images/icons8-instagram-60.png" alt="El icono de Instagram"></a>
+                <a href="https://www.facebook.com/kaffiMid/?locale=es_LA" target="_blank" class="me-5">
+                    <img class="social-icon" src="./assets/images/icons8-facebook-50 (2).png" alt="El icono de Facebook"></a>
+                <a href="https://api.whatsapp.com/message/RMOZKTGCQLG3H1?autoload=1&app_absent=0" target="_blank">
+                    <img class="social-icon" src="./assets/images/icons8-whatsapp-50 (1).png" alt="El icono de whatssap"></a>
+            </div>
+        </section>
+
+        <!-- Section: Logo y sucursales  -->
+        <section id="sucursales" class="text-center p-3 border-bottom border-3">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+
+                    <!-- Logo -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <img src="./assets/images/logo kaffi blanco.png" alt="logo de Kaffi" class="img-fluid w-50">
+                    </div>
+
+                    <!-- Fransisco Montejo -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h5 class="mb-4 ">
+                            Sucursal Francisco de Montejo
+                        </h5>
+                        <p class="text-light">
+                            C.41-A #441-x 58,
+                            Fransisco de Montejo,
+                            97203
+                            Mérida Yucatán
+                        </p>
+                    </div>
+
+                    <!-- Caucel -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h5 class="mb-4">
+                            Sucursal Caucel
+                        </h5>
+                        <p class="text-light">
+                            C.70 #673-x 39 A y 43,
+                            Plaza Premium Caucel local #6,
+                            Caucel, 97203,
+                            Mérida Yucatán
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="text-light text-center p-4">
+            <p class="text-light"> Politica de Privacidad | Términos y Condicones de Uso | Aviso Legal</p><br>
+            <p class="text-light">Copyright © [2018] [Kaffi S.A de C.V]</p>
+            <span>Todos los derechos reservados</span>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7f430a0c40.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+
+
+</html>

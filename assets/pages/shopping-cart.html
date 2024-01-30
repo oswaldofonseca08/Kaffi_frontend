@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../images/icono-kaffi.png">
+    <link rel="stylesheet" href="../styles/shopping-cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Inter:wght@700&display=swap" rel="stylesheet">
+    <title>Mi carrito - Kaffi</title>
+</head>
+
+<body>
+    <header>
+        <!-- barra de navegacion -->
+        <!-- diseño obtenido de https://getbootstrap.com/docs/5.3/components/navbar/ -->
+        <nav class="navbar navbar-expand-lg justify-content-between">
+
+            <!-- Botón de hamburguesa visible en pantallas pequeñas -->
+            <div class="py-2 ms-1 d-flex header-menu-icon">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                </button>
+            </div>
+
+            <!-- Contenedor del logo centrado, visible en pantallas pequeñas -->
+            <div class="d-lg-none d-flex align-items-center ms-auto ps-5">
+                <a href="../../index.html" class="header-logo-link">
+                    <img class="img-fluid" src="../images/imagen_nombre_kaffi.png" alt="imagen_de_nombre_kaffi"
+                        id="navegation-bar-logo" />
+                </a>
+            </div>
+
+            <!-- Contenedor del logo a la izquierda, visible en pantallas grandes -->
+            <div class="d-none d-lg-block mx-0 px-3">
+                <a href="../../index.html" class="header-logo-link py-3">
+                    <img class="img-fluid" src="../images/imagen_nombre_kaffi.png" alt="imagen_de_nombre_kaffi"
+                        id="navegation-bar-logo" />
+                </a>
+            </div>
+
+            <!-- Iconos de carrito y usuario a la derecha, siempre en la esquina superior derecha -->
+            <div id="iconos-carrito-y-usuario" class="ms-auto order-lg-last">
+                <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item p-0 d-flex align-items-center" id="shopping-cart">
+                        <a id="enlace-carrito-header" class="nav-link active text-white px-2"
+                            href="../pages/shopping-cart.html">
+                            <!-- Icono Carrito -->
+                            <i id="cart-icon"
+                                class="fa-solid fa-cart-shopping py-2 px-1 header-icons-link d-flex align-items-center justify-content-center"></i>
+                            <!-- inicia icono de numero de productos -->
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div id="cart-counter"
+                                    class="rounded-circle d-flex align-items-center justify-content-center">
+                                    <span id="total-number-items">0</span>
+                                </div>
+                            </div>
+                            <!-- termina icono de numero -->
+                        </a>
+                    </li>
+                    <li class="nav-item p-0 d-flex align-items-center">
+                        <a id="enlace-login-header" class="nav-link active text-white px-2"
+                            href="">
+                            <i class="fa-solid fa-user p-2 header-icons-link"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Menú desplegable, visible en pantallas pequeñas -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="../pages/menu.html">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="../pages/about_us.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="../pages/contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="introduction-container" class="row d-flex align-items-center justify-content-center mx-auto p-4">
+            <div class="col-md-6 d-flex justify-content-center">
+                <img class="img-fluid w-75" src="../images/logo kaffi shopping cart.png" alt="logo_kaffi_2"/>
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center pt-4 py-md-0">
+                <h6 class="description text-center">"Aquí encontrarás un resumen detallado de tus
+                    elecciones".</h6>
+                <h6 class="description text-center">Revisa tu pedido, ajusta cantidades y asegúrate de que
+                    todo esté perfecto antes de finalizar.</h6>
+            </div>
+        </section>
+    </header>
+
+    <!-- seccion principal -->
+    <main>
+        
+        <section id="shopping-products-container"
+            class="container d-flex align-items-center text-center justify-content-center">
+            
+            <div id="myModal" class="modal">
+                <div class="modal-content w-50">
+                    <span class="close">&times;</span>
+                    <h6>Por favor inicia sesión antes de continuar.</h6>
+                    <p>¡Mantendremos aqui tus productos mientras lo haces!</p>
+                </div>
+            </div>
+            <div id="myModal2" class="modal">
+                <div class="modal-content w-50">
+                    <span class="closeModal2">&times;</span>
+                    <h6>Al parecer eres un Administrador.</h6>
+                    <p>¡Solo los clientes pueden realizar compras!</p>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-start justify-content-center">
+                <div class="col-sm-12 col-md-4 my-2 d-flex flex-column justify-content-center align-items-center">
+                    <div id="totals-container" class="d-flex flex-column justify-content-center align-items-center w-100">
+                        <div class="py-3 d-flex flex-md-column align-items-center justify-content-around w-100">
+                            <h6 id="total-products-car" class="d-flex">Total : (0 Productos)</h6>
+                            <h6 id="total-price-car" class="d-flex">$0.00</h6>
+                        </div>
+                        <button id="pay-button" class="mb-3"> Proceder a Pagar </button>
+                    </div>
+                    <div class="row suggestion-section d-none d-md-flex align-items-center justify-content-center mt-3 my-md-3 mx-md-1">
+                        <h5 class="col-12 py-2 mt-3">Te podría interesar</h5>
+                        <div class="col-6 col-md-12 suggestion-card d-flex flex-column align-items-center justify-content-center">
+                            <div class="img-container">
+                                <img id="img-suggestion-1" src="" class="img-fluid">
+                             </div>
+                             <button id="add-suggestion-1" class="my-3"> Agregar a carrito </button>
+                        </div>
+                        <div class="col-6 col-md-12 suggestion-card d-flex flex-column align-items-center justify-content-center">
+                            <div class="img-container">
+                                <img id="img-suggestion-2" src="" class="img-fluid">
+                             </div>
+                             <button id="add-suggestion-2" class="my-3"> Agregar a carrito </button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-12 col-md-8 order-md-first">
+                    <div id="img-empty-car" class="flex-column justify-content-center align-items-center">
+                        <h3 class="pt-3">Parece que tu carrito esta vacio</h3>
+                        <p>Regresa al menú para agregar productos</p>
+                        <a href="../pages/menu.html">
+                            <button>Volver al menú</button>
+                        </a>
+                        <img src="../images/carrito vacio.png" class="img-fluid w-75 py-5">
+                    </div>
+                    <div id="products-to-buy" class="row d-flex align-items-center justify-content-center">
+                    </div>
+                </div>
+                <div class="row suggestion-section d-flex d-md-none align-items-center justify-content-center mt-2 mb-3">
+                    <h5 class="col-12 py-2 mt-3">Te podría interesar</h5>
+                    <div class="col-6 col-md-12 suggestion-card d-flex flex-column align-items-center justify-content-center">
+                        <div class="img-container">
+                            <img id="img-suggestion-1-sm" src="" class="img-fluid">
+                         </div>
+                         <button id="add-suggestion-1-sm" class="my-3"> Agregar a carrito </button>
+                    </div>
+                    <div class="col-6 col-md-12 suggestion-card d-flex flex-column align-items-center justify-content-center">
+                        <div class="img-container">
+                            <img id="img-suggestion-2-sm" src="" class="img-fluid">
+                         </div>
+                         <button id="add-suggestion-2-sm" class="my-3"> Agregar a carrito </button>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+    </main>
+
+
+    <!-- Foother Section -->
+    <!-- codigo de valdo -->
+
+    <footer class="text-light">
+
+        <!-- Section: Social media -->
+        <section id="social-media" class="text-center p-3 border-bottom border-3">
+
+            <div class="mb-2">
+                <span>Síguenos en nuestras redes sociales</span>
+            </div>
+
+            <div>
+                <a href="https://www.instagram.com/kaffimerida/" target="_blank" class="me-5">
+                    <img class="social-icon" src="../images/icons8-instagram-60.png" alt="El icono de Instagram"></a>
+                <a href="https://www.facebook.com/kaffiMid/?locale=es_LA" target="_blank" class="me-5">
+                    <img class="social-icon" src="../images/icons8-facebook-50 (2).png" alt="El icono de Facebook"></a>
+                <a href="https://api.whatsapp.com/message/RMOZKTGCQLG3H1?autoload=1&app_absent=0" target="_blank">
+                    <img class="social-icon" src="../images/icons8-whatsapp-50 (1).png" alt="El icono de whatssap"></a>
+            </div>
+        </section>
+
+        <!-- Section: Logo y sucursales  -->
+        <section id="sucursales" class="text-center p-3 border-bottom border-3">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+
+                    <!-- Logo -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <img src="../images/logo kaffi blanco.png" alt="logo de Kaffi" class="img-fluid w-50">
+                    </div>
+
+                    <!-- Fransisco Montejo -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h5 class="mb-4 ">
+                            Sucursal Francisco de Montejo
+                        </h5>
+                        <p class="text-light">
+                            C.41-A #441-x 58,
+                            Fransisco de Montejo,
+                            97203
+                            Mérida Yucatán
+                        </p>
+                    </div>
+
+                    <!-- Caucel -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h5 class="mb-4">
+                            Sucursal Caucel
+                        </h5>
+                        <p class="text-light">
+                            C.70 #673-x 39 A y 43,
+                            Plaza Premium Caucel local #6,
+                            Caucel, 97203,
+                            Mérida Yucatán
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="text-light text-center p-4">
+            <p class="text-light"> Politica de Privacidad | Términos y Condicones de Uso | Aviso Legal</p><br>
+            <p class="text-light">Copyright © [2018] [Kaffi S.A de C.V]</p>
+            <span>Todos los derechos reservados</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7f430a0c40.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="module" src="../js/shopping-cart.js"></script>
+</body>
+
+
+</html>
